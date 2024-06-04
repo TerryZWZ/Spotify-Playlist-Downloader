@@ -1,0 +1,14 @@
+body {
+  /*Box model stuff*/
+  margin: 0;
+  /*Typography stuff*/
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  /*Miscellaneous*/
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  /*Typography stuff*/
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}

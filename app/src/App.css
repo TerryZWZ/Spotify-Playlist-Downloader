@@ -1,0 +1,144 @@
+body {
+  /*Box model stuff*/
+  background-color: #191414;
+}
+
+.contain {
+  /*Display stuff*/
+  display: grid;
+  /*Miscellaneous*/
+  place-items: center;
+}
+
+.spotifyLogin {
+  /*Box model stuff*/
+  margin-top: 20%;
+  padding: 5%;
+  border-radius: 25px;
+  background-color: #1DB954;
+  /*Typography stuff*/
+  font-size: 5em;
+  font-weight: bolder;
+  color: #191414;
+  /*Miscellaneous*/
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.title {
+  /*Typography stuff*/
+  font-size: 5em;
+  color: white;
+}
+
+.description {
+  /*Box model stuff*/
+  margin-top: -4%;
+  /*Typography stuff*/
+  font-size: 2em;
+  color: #646464;
+}
+
+.message {
+  /*Typography stuff*/
+  font-size: 1em;
+  color: #1DB954;
+}
+
+.inputLink {
+  /*Box model stuff*/
+  width: 1300px;
+  border-color: #1DB954;
+  border-width: 10px;
+  outline: none;
+  background-color: #191414;
+  /*Typography stuff*/
+  font-family: "Segoe UI";
+  font-size: 5em;
+  color: #1DB954;
+}
+
+.submitLink {
+  /*Box model stuff*/
+  padding: 1%;
+  border: none;
+  border-radius: 5px;
+  background-color: #1DB954;
+  /*Typography stuff*/
+  font-size: 2em;
+  font-weight: bolder;
+  color: #191414;
+  /*Miscellaneous*/
+  cursor: pointer;
+}
+
+.containForm {
+  /*Typography stuff*/
+  text-align: center;
+}
+
+.convertForm {
+  /*Box model stuff*/
+  margin-top: 10%;
+}
+
+/* --- Adjusting for Screen Resolution --- */
+@media (min-width: 144px) {
+  .contain {
+    zoom: 7.50%;
+  }
+}
+
+@media (min-width: 240px) {
+  .contain {
+    zoom: 12.50%;
+  }
+}
+
+@media (min-width: 480px) {
+  .contain {
+    zoom: 16.67%;
+  }
+}
+
+@media (min-width: 640px) {
+  .contain {
+    zoom: 33.33%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .contain {
+    zoom: 66.67%;
+  }
+}
+
+@media (min-width: 1366px) {
+  .contain {
+    zoom: 71.15%;
+  }
+}
+
+@media (min-width: 1600px) {
+  .contain {
+    zoom: 83.33%;
+  }
+}
+
+@media (min-width: 1920px) {
+  .contain {
+    zoom: 100%;
+  }
+}
+
+@media (min-width: 2560px) {
+  .contain {
+    zoom: 133.33%;
+  }
+}
+
+@media (min-width: 3840px) {
+  .contain {
+    zoom: 200%;
+  }
+}
