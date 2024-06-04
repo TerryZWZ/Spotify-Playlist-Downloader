@@ -30,7 +30,7 @@ function App() {
             // MP3 File Download
             const playlistCall = async () => {
 
-                // Calling the back-end (Node.js server) to call Spotify for playlist data and call YouTube for music video links
+                // Fetching the back-end (Node.js server) to call Spotify for playlist data and call YouTube for music video links
                 try {
                     const response = await fetch(`${API_BASE_URL}/playlist`, {
                         method: 'POST',
@@ -51,7 +51,7 @@ function App() {
                     let youtubeLinks = data.youtubeLinks;
                     let playlist = data.playlist;
 
-                    // Calling the back-end (Node.js server) to create music files to download from YouTube links
+                    // Fetching the back-end (Node.js server) to create music files to download from YouTube links
                     fetch(`${API_BASE_URL}/download`, {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
