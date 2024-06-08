@@ -105,6 +105,8 @@ function App() {
 
     // Spotify Authorization Page Redirect
     const login = async () => {
+        setIsBuffering(true);
+        
         try {
             const response = await fetch(`${API_BASE_URL}/login`, {
                 method: 'POST',
@@ -121,6 +123,7 @@ function App() {
             }
 
             const data = await response.json();
+            setIsBuffering(false);
             window.location.href = data.link;
         } catch (error) {
             console.log(error);
@@ -132,7 +135,16 @@ function App() {
         <div className="contain">
 
             {!spotifyAuth &&
-                <button className='spotifyLogin' onClick={login}>Login to Spotify</button>
+                <div className='containForm'>
+                    <button className='spotifyLogin' onClick={login}>Login to Spotify</button>
+                    <h1 className='message'>Note: May need to wait a minute or two for the backend to wake up</h1>
+
+                    {isBuffering &&
+                        <div className='buffering'>
+                            <span className='dot'>.</span><span className='dot'>.</span><span className='dot'>.</span>
+                        </div>
+                    }
+                </div>
             }
 
             {spotifyAuth &&
@@ -144,7 +156,7 @@ function App() {
                             <h1 className='message'>i.e. https://open.spotify.com/playlist/...</h1>
                             <input className='inputLink' type="text" value={input} onChange={(event) => setInputValue(event.target.value)} />
                             
-                            <h1 className='message'>Note: May have to wait a bit to process</h1>
+                            <h1 className='message'>Note: May have to wait some time to process</h1>
                         </label>
                         <br></br>
                         <input className='submitLink' type="submit" value="Submit" />
