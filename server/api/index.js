@@ -3,8 +3,8 @@ const express = require('express'); // Routing
 const cors = require('cors'); // Enable CORS policy
 const bodyParser = require('body-parser'); // For extracting data and have access to it
 const archiver = require('archiver'); // For downloading zip files
+const youtube = require('scrape-youtube'); // To Search Youtube Links
 const ytdl = require('ytdl-core'); // To Download YouTube Links
-const YTSearch = require('youtube-api-search');
 
 const app = express();
 app.use(bodyParser.json());
@@ -72,15 +72,16 @@ app.post('/playlist', async (req, res) => {
             return new Promise((resolve, reject) => {
 
                 // Actual Search
-                YTSearch({ key: APIkey, term: searchTerm, type: 'video', maxResults: 1 }, (videos) => {
-                    if (videos.length > 0) {
-                        let vid = videos[0];
-                        let link = `https://www.youtube.com/watch?v=${vid.id.videoId}`;
-                        resolve(link);
+                youtube.search(searchTerm).then((results) => {
+                    if (results.videos.length > 0) {
+                        resolve(results.videos[0].link);
                     }
                     else {
-                        reject('No video found');
+                        resolve(null);
                     }
+                }).catch((err) => {
+                    console.error(`Error searching for ${searchTerm}:`, err);
+                    reject(err);
                 });
             });
         });
@@ -181,3 +182,4 @@ app.post('/download', (req, res) => {
 // Run Server [MUST BE DIFFERENT PORT FROM APP]
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, console.log(`Server started on port ${ PORT }`));
+module.exports = app;

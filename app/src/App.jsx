@@ -13,10 +13,12 @@ function App() {
     const API_BASE_URL = import.meta.env.VITE_REACT_APP_BACKEND_URL; // Website URL
     let accessToken = getToken(window.location.hash); // Retrieves Access Token
     let [input, setInputValue] = useState(''); // For Spotify Playlist Input
+    const [isBuffering, setIsBuffering] = useState(false); // For loading signal
 
     // Search Button Function
     const handleSubmit = (event) => {
         event.preventDefault();
+        setIsBuffering(true);
 
         // The link must be a spotify playlist link
         if (input.includes("open.spotify.com/playlist/") && input.includes("?")) {
@@ -69,6 +71,7 @@ function App() {
                         link.setAttribute('download', 'music.zip');
                         document.body.appendChild(link);
                         link.click();
+                        setIsBuffering(false);
                     })
                     .catch(error => console.error('Error:', error));
 
@@ -81,8 +84,7 @@ function App() {
         }
         else {
             console.log("Be sure to input the playlist link")
-        }
-
+        } 
     };
 
     // Spotify Authorization Check
@@ -141,11 +143,18 @@ function App() {
                         <label>
                             <h1 className='message'>i.e. https://open.spotify.com/playlist/...</h1>
                             <input className='inputLink' type="text" value={input} onChange={(event) => setInputValue(event.target.value)} />
+                            
                             <h1 className='message'>Note: May have to wait a bit to process</h1>
                         </label>
-                        <br></br><br></br>
+                        <br></br>
                         <input className='submitLink' type="submit" value="Submit" />
                     </form>
+                    
+                    {isBuffering &&
+                        <div className='buffering'>
+                            <span className='dot'>.</span><span className='dot'>.</span><span className='dot'>.</span>
+                        </div>
+                    }
                 </div>
             }
 

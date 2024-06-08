@@ -1,85 +1,95 @@
 body {
-  /*Box model stuff*/
   background-color: #191414;
 }
 
 .contain {
-  /*Display stuff*/
   display: grid;
-  /*Miscellaneous*/
   place-items: center;
 }
 
 .spotifyLogin {
-  /*Box model stuff*/
   margin-top: 20%;
   padding: 5%;
   border-radius: 25px;
   background-color: #1DB954;
-  /*Typography stuff*/
   font-size: 5em;
   font-weight: bolder;
   color: #191414;
-  /*Miscellaneous*/
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
 
 .title {
-  /*Typography stuff*/
   font-size: 5em;
   color: white;
 }
 
 .description {
-  /*Box model stuff*/
   margin-top: -4%;
-  /*Typography stuff*/
   font-size: 2em;
   color: #646464;
 }
 
 .message {
-  /*Typography stuff*/
   font-size: 1em;
   color: #1DB954;
 }
 
 .inputLink {
-  /*Box model stuff*/
   width: 1300px;
   border-color: #1DB954;
   border-width: 10px;
   outline: none;
   background-color: #191414;
-  /*Typography stuff*/
   font-family: "Segoe UI";
   font-size: 5em;
   color: #1DB954;
 }
 
 .submitLink {
-  /*Box model stuff*/
   padding: 1%;
   border: none;
   border-radius: 5px;
   background-color: #1DB954;
-  /*Typography stuff*/
   font-size: 2em;
   font-weight: bolder;
   color: #191414;
-  /*Miscellaneous*/
   cursor: pointer;
 }
 
 .containForm {
-  /*Typography stuff*/
   text-align: center;
 }
 
 .convertForm {
-  /*Box model stuff*/
   margin-top: 10%;
+}
+
+.buffering {
+  font-size: 100px;
+  margin-top: -5%;
+  color: white;
+}
+
+.dot {
+  animation: blink 1s infinite;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes blink {
+  0%, 20% {
+      opacity: 1;
+  }
+  50%, 100% {
+      opacity: 0;
+  }
 }
 
 /* --- Adjusting for Screen Resolution --- */
