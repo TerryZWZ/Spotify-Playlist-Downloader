@@ -8,13 +8,14 @@
   },
   "dependencies": {
     "archiver": "^5.3.1",
-    "body-parser": "^1.20.2",
     "concurrently": "^7.6.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.18.2",
+    "http": "^0.0.1-security",
     "nodemon": "^2.0.21",
-    "scrape-youtube": "^2.4.0",
+    "ws": "^8.17.0",
+    "yt-search": "^2.11.0",
     "ytdl-core": "^4.11.5"
   }
 }

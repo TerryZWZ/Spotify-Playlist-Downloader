@@ -25,9 +25,9 @@ body {
 }
 
 .description {
-  margin-top: -4%;
   font-size: 2em;
   color: #646464;
+  margin-top: -2%;
 }
 
 .message {
@@ -47,27 +47,29 @@ body {
 }
 
 .submitLink {
-  padding: 1%;
+  padding: 2%;
   border: none;
   border-radius: 5px;
   background-color: #1DB954;
-  font-size: 2em;
+  font-size: 5em;
   font-weight: bolder;
   color: #191414;
   cursor: pointer;
 }
 
-.containForm {
+.loginForm {
   text-align: center;
 }
 
-.convertForm {
-  margin-top: 10%;
+.containForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 .buffering {
   font-size: 100px;
-  margin-top: -5%;
   color: white;
 }
 
@@ -92,63 +94,53 @@ body {
   }
 }
 
-/* --- Adjusting for Screen Resolution --- */
-@media (min-width: 144px) {
-  .contain {
-    zoom: 7.50%;
-  }
+.songInfo {
+  font-size: 1em;
+  color: #646464;
 }
 
-@media (min-width: 240px) {
-  .contain {
-    zoom: 12.50%;
-  }
+.bottomContain {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2%;
 }
 
-@media (min-width: 480px) {
-  .contain {
-    zoom: 16.67%;
-  }
+.optionContain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-@media (min-width: 640px) {
-  .contain {
-    zoom: 33.33%;
-  }
+.options {
+  font-size: 1em;
+  font-weight: bolder;
+  color: #191414;
 }
 
-@media (min-width: 1280px) {
-  .contain {
-    zoom: 66.67%;
-  }
+select {
+  color: #548e9f;
+  background-color: #191414;
+  font-size: 1em;
+  margin-left: 25px;
+  padding: 2%;
+  border-radius: 5px;
 }
 
-@media (min-width: 1366px) {
-  .contain {
-    zoom: 71.15%;
-  }
+option {
+  color: #548e9f;
+  background-color: #191414;
+  font-size: 1em;
 }
 
-@media (min-width: 1600px) {
-  .contain {
-    zoom: 83.33%;
-  }
-}
-
-@media (min-width: 1920px) {
-  .contain {
-    zoom: 100%;
-  }
-}
-
-@media (min-width: 2560px) {
-  .contain {
-    zoom: 133.33%;
-  }
-}
-
-@media (min-width: 3840px) {
-  .contain {
-    zoom: 200%;
-  }
+.selection {
+  background-color: #548e9f;
+  padding: 10px;
+  width: 300px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
 }
