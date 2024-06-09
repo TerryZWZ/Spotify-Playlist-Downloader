@@ -1,146 +1,146 @@
 body {
-  background-color: #191414;
+    background-color: #191414;
 }
 
 .contain {
-  display: grid;
-  place-items: center;
+    place-items: center;
+    display: grid;
 }
 
 .spotifyLogin {
-  margin-top: 50%;
-  padding: 5%;
-  border-radius: 25px;
-  background-color: #1DB954;
-  font-size: 5em;
-  font-weight: bolder;
-  color: #191414;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin-top: 50%;
+    padding: 5%;
+    background-color: #1DB954;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 5em;
+    font-weight: bolder;
+    color: #191414;
 }
 
 .title {
-  font-size: 5em;
-  color: white;
+    font-size: 5em;
+    color: white;
 }
 
 .description {
-  font-size: 2em;
-  color: #646464;
-  margin-top: -2%;
+    margin-top: -2%;
+    font-size: 2em;
+    color: #646464;
 }
 
 .message {
-  font-size: 1em;
-  color: #1DB954;
+    font-size: 1em;
+    color: #1DB954;
 }
 
 .inputLink {
-  width: 1300px;
-  border-color: #1DB954;
-  border-width: 10px;
-  outline: none;
-  background-color: #191414;
-  font-family: "Segoe UI";
-  font-size: 5em;
-  color: #1DB954;
+    outline: none;
+    width: 1300px;
+    background-color: #191414;
+    border-width: 10px;
+    border-color: #1DB954;
+    font-size: 5em;
+    font-family: "Segoe UI";
+    color: #1DB954;
 }
 
 .submitLink {
-  padding: 2%;
-  border: none;
-  border-radius: 5px;
-  background-color: #1DB954;
-  font-size: 5em;
-  font-weight: bolder;
-  color: #191414;
-  cursor: pointer;
+    padding: 2%;
+    background-color: #1DB954;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-size: 5em;
+    font-weight: bolder;
+    color: #191414;
 }
 
 .loginForm {
-  text-align: center;
+    text-align: center;
 }
 
 .containForm {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 .buffering {
-  font-size: 100px;
-  color: white;
+    font-size: 100px;
+    color: white;
 }
 
 .dot {
-  animation: blink 1s infinite;
+    animation: blink 1s infinite;
 }
 
 .dot:nth-child(2) {
-  animation-delay: 0.2s;
+    animation-delay: 0.2s;
 }
 
 .dot:nth-child(3) {
-  animation-delay: 0.4s;
+    animation-delay: 0.4s;
 }
 
 @keyframes blink {
   0%, 20% {
       opacity: 1;
   }
-  50%, 100% {
+50%, 100% {
       opacity: 0;
   }
 }
 
 .songInfo {
-  font-size: 1em;
-  color: #646464;
+    font-size: 1em;
+    color: #646464;
 }
 
 .bottomContain {
-  width: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    margin-top: 2%;
 }
 
 .optionContain {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .options {
-  font-size: 1em;
-  font-weight: bolder;
-  color: #191414;
+    font-size: 1em;
+    font-weight: bolder;
+    color: #191414;
 }
 
 select {
-  color: #548e9f;
-  background-color: #191414;
-  font-size: 1em;
-  margin-left: 25px;
-  padding: 2%;
-  border-radius: 5px;
+    margin-left: 25px;
+    padding: 2%;
+    background-color: #191414;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #548e9f;
 }
 
 option {
-  color: #548e9f;
-  background-color: #191414;
-  font-size: 1em;
+    background-color: #191414;
+    font-size: 1em;
+    color: #548e9f;
 }
 
 .selection {
-  background-color: #548e9f;
-  padding: 10px;
-  width: 300px;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    width: 300px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #548e9f;
+    border-radius: 5px;
 }
