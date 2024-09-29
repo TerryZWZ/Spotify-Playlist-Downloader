@@ -183,7 +183,7 @@ function App() {
 
             {spotifyAuth &&
                 <div className='containForm'>
-                    <h1 className='title'>Spotify Playlist MP3 Converter</h1>
+                    <h1 className='title'>Spotify Playlist Downloader</h1>
                     <h1 className='description'>Turn a Spotify Playlist into MP3 Files</h1>
                     
                     <form className='convertForm' onSubmit={handleSubmit}>
